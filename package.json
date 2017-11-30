@@ -1,0 +1,32 @@
+{
+  "name": "fastify-no-icon",
+  "version": "1.0.0",
+  "description": "A simple Fastify plugin to ignore favicon requests",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jsumners/fastify-no-icon.git"
+  },
+  "keywords": [
+    "fastify"
+  ],
+  "author": "James Sumners <james.sumners@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsumners/fastify-no-icon/issues"
+  },
+  "homepage": "https://github.com/jsumners/fastify-no-icon#readme",
+  "dependencies": {
+    "fastify-plugin": "^0.1.1"
+  },
+  "devDependencies": {
+    "fastify": "^0.35.2",
+    "got": "^8.0.0",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3",
+    "tap": "^11.0.0"
+  }
+}
