@@ -20,13 +20,13 @@
   },
   "homepage": "https://github.com/jsumners/fastify-no-icon#readme",
   "dependencies": {
-    "fastify-plugin": "^0.1.1"
+    "fastify-plugin": "^0.2.1"
   },
   "devDependencies": {
-    "fastify": "^0.35.2",
-    "got": "^8.0.0",
+    "fastify": "^0.39.1",
+    "got": "^8.0.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
-    "tap": "^11.0.0"
+    "tap": "^11.0.1"
   }
 }

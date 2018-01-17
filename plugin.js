@@ -11,4 +11,7 @@ function noFaviconPlugin (fastify, options, next) {
   next()
 }
 
-module.exports = fp(noFaviconPlugin)
+module.exports = fp(noFaviconPlugin, {
+  fastify: '>=0.39.1',
+  name: 'fastify-no-icon'
+})
