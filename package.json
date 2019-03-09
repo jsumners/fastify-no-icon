@@ -1,6 +1,6 @@
 {
   "name": "fastify-no-icon",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A simple Fastify plugin to ignore favicon requests",
   "main": "plugin.js",
   "scripts": {
