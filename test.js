@@ -14,12 +14,12 @@ test('it returns an empty 404', (t) => {
     const port = fastify.server.address().port
     got(`http://127.0.0.1:${port}/favicon.ico`)
       .then(() => {
-        t.fail('should not happen')
+        t.fail('should receive an error')
       })
-      .catch((err) => {
+      .catch(err => {
         t.type(err, Error)
-        t.is(err.statusCode, 404)
-        t.is(+err.headers['content-length'], 0)
+        t.is(err.response.statusCode, 404)
+        t.is(+err.response.headers['content-length'], 0)
       })
   })
 })
