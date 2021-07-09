@@ -4,7 +4,8 @@
   "description": "A simple Fastify plugin to ignore favicon requests",
   "main": "plugin.js",
   "scripts": {
-    "test": "tap test.js"
+    "test": "tap test.js",
+    "test:typescript": "tsd"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
     "got": "^11.5.2",
     "snazzy": "^8.0.0",
     "standard": "^14.3.4",
-    "tap": "^14.10.8"
+    "tap": "^14.10.8",
+    "tsd": "^0.14.0",
+    "typescript": "~4.2.4"
   }
 }
