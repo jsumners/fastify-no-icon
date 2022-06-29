@@ -8,7 +8,9 @@ test('it returns an empty 404', (t) => {
   const fastify = require('fastify')()
   fastify.register(require('./'))
 
-  fastify.listen(0, (err) => {
+  fastify.listen({
+    port: 0,
+  }, (err) => {
     fastify.server.unref()
     if (err) t.threw(err)
     const port = fastify.server.address().port
@@ -18,8 +20,8 @@ test('it returns an empty 404', (t) => {
       })
       .catch(err => {
         t.type(err, Error)
-        t.is(err.response.statusCode, 404)
-        t.is(+err.response.headers['content-length'], 0)
+        t.equal(err.response.statusCode, 404)
+        t.equal(+err.response.headers['content-length'], 0)
       })
   })
 })

@@ -9,7 +9,9 @@ isn't registered to handle the request. This plugin merely gives it one.
 ```js
 const fastify = require('fastify')()
 fastify.register(require('fastify-no-icon'))
-fastify.listen(3000)
+fastify.listen({
+  port: 3000
+})
 // curl 127.0.0.1:3000/favicon.ico => empty 404 and no thrown error
 ```
 
