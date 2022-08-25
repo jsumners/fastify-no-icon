@@ -5,7 +5,7 @@
   "main": "plugin.js",
   "types": "index.d.ts",
   "scripts": {
-    "lint": "standard | standard",
+    "lint": "standard | snazzy",
     "test": "tap test.js",
     "test:typescript": "tsd",
     "test:ci": "npm run test && npm run test:typescript"
