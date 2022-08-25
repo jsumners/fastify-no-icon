@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14, 16]
+        node-version: [14, 16, 18]
         os: [macos-latest, ubuntu-latest, windows-latest]
 
     steps:
@@ -30,6 +30,10 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install --ignore-scripts
+
+      - name: Lint
+        run: |
+          npm run lint
 
       - name: Run Tests
         run: |
