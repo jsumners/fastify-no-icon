@@ -1,27 +1,16 @@
 'use strict'
 
 const test = require('tap').test
-const got = require('got')
 
-test('it returns an empty 404', (t) => {
-  t.plan(3)
+test('it returns an empty 404', async (t) => {
+  t.plan(2)
   const fastify = require('fastify')()
-  fastify.register(require('./'))
+  fastify.register(require('.'))
 
-  fastify.listen({
-    port: 0,
-  }, (err) => {
-    fastify.server.unref()
-    if (err) t.threw(err)
-    const port = fastify.server.address().port
-    got(`http://127.0.0.1:${port}/favicon.ico`)
-      .then(() => {
-        t.fail('should receive an error')
-      })
-      .catch(err => {
-        t.type(err, Error)
-        t.equal(err.response.statusCode, 404)
-        t.equal(+err.response.headers['content-length'], 0)
-      })
-  })
+  await fastify.listen({ port: 0 })
+  t.teardown(() => { fastify.close() })
+
+  const response = await fastify.inject('/favicon.ico')
+  t.equal(response.statusCode, 404)
+  t.equal(response.headers['content-length'], '0')
 })
