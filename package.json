@@ -24,11 +24,11 @@
   },
   "homepage": "https://github.com/jsumners/fastify-no-icon#readme",
   "dependencies": {
-    "fastify-plugin": "^4.2.1"
+    "fastify-plugin": "^5.0.1"
   },
   "devDependencies": {
-    "@types/node": "^18.7.14",
-    "fastify": "^4.5.3",
+    "@types/node": "^20.16.10",
+    "fastify": "^5.0.0",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
     "tap": "^16.3.0",
